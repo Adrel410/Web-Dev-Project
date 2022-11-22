@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import Button from 'react-bootstrap/Button';
 
 function GeneratePicture() {
     const [url, setUrl] = useState('');
@@ -16,7 +17,10 @@ function GeneratePicture() {
     return (
         <div>
             <img src={url} alt=""/>
-            <button onClick={fetch_data}>Get Photo</button>
+            <Button onClick={fetch_data}>Get Photo</Button>
+            <Button><i class="bi bi-hand-thumbs-up-fill"></i></Button>{' '}
+            <Button variant="danger" onClick={fetch_data}><i class="bi bi-hand-thumbs-down-fill"></i></Button>{' '}
+            
         </div>
     )
 }
